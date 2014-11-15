@@ -1,0 +1,26 @@
+body {
+	margin: 0 auto;
+	width: 300px;
+	text-align: center;
+	font-size: 12pt;
+}
+h3 {
+	margin-top: 35px;
+}
+#button {
+	border: 2px solid black;
+	margin-left: 150px;
+	margin-top: 10px;
+}
+p {
+	border: 2px solid black;
+	font-size: 11pt;
+	font-weight: bold;
+	margin-top: 25px;
+}
+p.error {
+	background-color: pink;
+}
+p.sucess {
+	background-color: lightgreen;
+}
