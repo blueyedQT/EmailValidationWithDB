@@ -1,7 +1,7 @@
 <?php
 require ('connection.php');
 session_start();
-var_dump($_POST);
+// var_dump($_POST);
 
 if(!empty($_POST['email'])) {
 	$email = $_POST['email'];
@@ -20,7 +20,7 @@ if(!empty($_POST['email'])) {
 			// header('location: index.php');
 		}
 	}
-} elseif (!empty($_POST['delete'])) {
-	 echo $_POST;
+} elseif(!empty($_POST)) {
+	 echo $_POST[];
 }
 ?>
