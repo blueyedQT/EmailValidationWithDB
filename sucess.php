@@ -21,8 +21,8 @@ require_once('connection.php');
 	$emails = fetch_all($query2);
 	foreach($emails as $email) { ?>
 	<h4><?= $email['email'] ?></h4> <h4><?= $email['dc'] ?></h4>
-	<!-- <input type="hidden" name="<?= $email['id'] ?>" value=""/> -->
-	<input type="submit" name="<?= $email['id'] ?>" value="Delete!"/>
+	<input type="hidden" name="hide" value="<?= $email['id'] ?>"/> -->
+	<input type="submit" name="delete" value="Delete!"/>
 <?php 
 	} ?>
 	</form>
