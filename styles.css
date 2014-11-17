@@ -1,22 +1,38 @@
+* {
+	padding: 0;
+	margin: 0;
+}
 body {
 	margin: 0 auto;
-	width: 400px;
+	width: 600px;
 	text-align: center;
 	font-size: 12pt;
+	padding-top: 30px;
+	background-color: lightblue;
+}
+form {
+	border: 1px dashed blue;
+	background-color: white;
+	padding: 20px 10px;
 }
 h3 {
 	margin-top: 35px;
 }
-#button {
+.block {
+	display: block;
+	margin: 10px auto;
+}
+.button {
 	border: 2px solid black;
-	margin-left: 150px;
-	margin-top: 10px;
+	margin-top: 20px;
+	background-color: blue;
+	color: white;
+	padding: 5px;
 }
 p {
 	border: 2px solid black;
 	font-size: 11pt;
 	font-weight: bold;
-	margin-top: 25px;
 }
 p.error {
 	background-color: pink;
@@ -24,8 +40,15 @@ p.error {
 p.sucess {
 	background-color: lightgreen;
 }
+h1 {
+	border-bottom: 1px dashed blue;
+	padding-bottom: 10px;
+	margin: 10px 0;
+}
 h4 {
-	min-width: 150px;
+	min-width: 250px;
 	display: inline-block;
 	text-align: left;
+	padding-top: 5px;
+	border-bottom: 1px dashed lightgray;
 }

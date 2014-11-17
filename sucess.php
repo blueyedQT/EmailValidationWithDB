@@ -10,22 +10,17 @@ require_once('connection.php');
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<?php 
-	if(!empty($_SESSION['message'])) { ?>
-	<p class='sucess'><?= $_SESSION['message'] ?></p>
-<?php 	unset($_SESSION['message']); } ?>
-	<h1>Email Addresses Entered:</h1>
 	<form action="process.php" method="post">
-<?php 
-	$query2 = "SELECT id, email, DATE_FORMAT(created_at, '%b %e, %Y %I:%i %p') AS dc FROM emails";
-	$emails = fetch_all($query2);
-	foreach($emails as $email) { ?>
-	<h4><?= $email['email'] ?></h4> <h4><?= $email['dc'] ?></h4>
-	<input type="hidden" name="hide" value="<?= $email['id'] ?>"/> -->
-	<input type="submit" name="delete" value="Delete!"/>
-<?php 
-	} ?>
+<?php 	if(!empty($_SESSION['message'])) { ?>
+		<p class='sucess'><?= $_SESSION['message'] ?></p>
+<?php 		unset($_SESSION['message']); } ?>
+		<h1>Email Addresses Entered:</h1>
+<?php 	$query2 = "SELECT id, email, DATE_FORMAT(created_at, '%b %e, %Y %I:%i %p') AS dc FROM emails ORDER BY dc DESC";
+		$emails = fetch_all($query2);
+		foreach($emails as $email) { ?>
+		<h4><?= $email['email'] ?></h4> <h4><?= $email['dc'] ?></h4>
+		<a href="process.php?id='<?= $email['id'] ?>'">DELETE</a>
+<?php 	} ?>
 	</form>
 </body>
 </html>
-<?php session_destroy(); ?>
