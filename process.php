@@ -16,13 +16,6 @@ if(!empty($_POST['email'])) {
 		if($results1) {
 			$_SESSION['message'] = 'The email address '. $email . ' is a VALID email address!  Thank you!';
 			header('location: sucess.php');
-		} else {
-			$SESSION['message'] = 'There was an error adding your email, please try again.';
-			header('location: index.php');
-		}
-	}
-} 
-
 			exit;
 		} else {
 			$SESSION['message'] = 'There was an error adding your email, please try again.';
